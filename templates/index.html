@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="background-color:blue;">
+<title>Purchase Prediction </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<h1> PURCHASE PREDICTION </h1>
+
+<p>Enter the following information</p>
+
+<input type="text" name="text" value="Developed by PRAVEEN BHARGAV" size="35"  readonly><br><br><br>
+<form action="/predict" method="post" autocomplete="off">
+
+
+<label for="age">Age<span style="color:red;">*</span>:</label>
+<input type="number" id="age" name="Age" min="18" max="65" placeholder="18-65" required="required"><BR><br>
+
+<label for="estslry">Estimated Salary<span style="color:red;">*</span>:</label>
+<input type="number" id="estslry" name="EstimatedSalary" placeholder="352-452" min="0" required="required"><br><br>
+
+<label for="gender">Gender {0:Female,1:Male}<span style="color:red;">*</span>:</label>
+<input type="number" id="gender" name="Gender" min="0" max="1" required="required"> <br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+<br>
+
+<h2> Check the status of the customer: {{ prediction_text }}</h2>
+
+
+</form>
+
+
+
+</body>
+</html>
